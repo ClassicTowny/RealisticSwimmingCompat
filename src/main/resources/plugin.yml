@@ -1,0 +1,8 @@
+name: RealisticSwimmingCompat
+main: me.drkmatr1984.RealisticSwimmingCompat.RealisticSwimmingCompat
+version: 0.1
+author: DrkMatr1984
+website: www.minevolt.net
+
+depend: [Realistic-Swimming]
+softdepend: [AAC]
