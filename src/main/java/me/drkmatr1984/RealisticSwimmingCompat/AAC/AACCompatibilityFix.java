@@ -20,16 +20,18 @@ public class AACCompatibilityFix implements Listener
 	@EventHandler
     public void onPlayerViolation(PlayerViolationEvent e) {
         Player p = e.getPlayer();
-        if(!p.hasMetadata("swimmingDisabled")){
-        	if(api==null){
-        		this.api = AACAPIProvider.getAPI();
-        	}
-        	if(api.isEnabled(HackType.FLY))
-        	{
-        		if(p.hasMetadata("swimming")){
-        			e.setCancelled(true);
-        		}
-        	}
-        }     
+        if(p!=null) {
+        	if(!p.hasMetadata("swimmingDisabled")){
+            	if(api==null){
+            		this.api = AACAPIProvider.getAPI();
+            	}
+            	if(api.isEnabled(HackType.FLY))
+            	{
+            		if(p.hasMetadata("swimming")){
+            			e.setCancelled(true);
+            		}
+            	}
+            }
+        }          
     }
 }
